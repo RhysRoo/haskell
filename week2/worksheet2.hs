@@ -12,7 +12,9 @@ heartMonitor age bpm
 
 -- exercises
 
--- 1)
+--1)
+
+
 
 --2) 
 sign :: Int -> Int
@@ -26,7 +28,8 @@ howManyEqual :: Int -> Int -> Int -> Int
 howManyEqual a b c
     | a == b && b == c = 3
     | a == b || a == c || b == c = 2
-    | a /= b || a /= c || b /= c = 0
+    | otherwise = 0
+
 
 --4
 sumDiagonalLengths :: Float -> Float -> Float -> Float
@@ -86,7 +89,19 @@ step 7 - are there anymore instrustructs? no
 step 8 - return the provisional result as output
 
 Q1b) sumThree 8 (1 + 3) 2
-step 1 - 
+step 1 - The function will scan through the lines of inputs in a linear way starting from value 1 until the ending, 
+but won't start until it knows there are no partenthies. in this line of code partenthies are present so looks inside and checks
+if its the only partenthies within the partenthies.
+
+Step 2 inside the partenthies now it will look for operators and in this case 1 + 3 will be added together
+which equals 4 
+
+Step 3)now the partenthies has been complete, the program will start at the very start of the programs inputs, but
+instead of 8 (1 + 3) 2, the program will see 8 + 4 + 2
+
+Step 4) 8 + 4 + 2 = 14
+
+Q2a)
 
 
 -}
